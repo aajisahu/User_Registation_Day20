@@ -1,6 +1,5 @@
 package com.userregistation.exception;
 
-
 public class MoodAnalyser {
     public static String analyseMood(String mood) {
         if (mood.toLowerCase().contains("happy")) {
