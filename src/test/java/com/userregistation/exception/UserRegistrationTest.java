@@ -31,18 +31,20 @@ public class UserRegistrationTest {
 		boolean result = userRegistration.lastName("surja");
 		Assert.assertEquals(false, result);
 	}
+	/*
+	 * methods to check mail addresss
+	 */
+	@Test
+	public void givenEmail_WhenInFormat_ShouldReturnTrue() {
+		boolean result = userRegistration.emailAddress("abc@gmail.com.com");
+		Assert.assertEquals(true, result);
+	}
 
-	  @Test
-	    public void givenEmail_WhenInFormat_ShouldReturnTrue() {
-	        boolean result = userRegistration.emailAddress("abc@gmail.com.com");
-	        Assert.assertEquals(true, result);
-	    }
-
-	    @Test
-	    public void givenEmail_WhenOurOfFormat_ShouldReturnFalse() {
-	        boolean result = userRegistration.emailAddress("abc()*@gmail.com");
-	        Assert.assertEquals(false, result);
-	    }
+	@Test
+	public void givenEmail_WhenOurOfFormat_ShouldReturnFalse() {
+		boolean result = userRegistration.emailAddress("abc()*@gmail.com");
+		Assert.assertEquals(false, result);
+	}
 
 
 
